@@ -125,10 +125,21 @@ const Login = () => {
                     cursor: 'pointer',
                     fontWeight: 'bold',
                     fontSize: '1rem',
-                    transition: 'background 0.2s'
+                    transition: 'background 0.2s',
+                    marginBottom: '1rem'
                 }}>
                     Sign In
                 </button>
+
+                <div style={{ textAlign: 'center', fontSize: '0.875rem', color: 'var(--text-secondary)' }}>
+                    Don't have an organization?{' '}
+                    <span 
+                        onClick={() => navigate('/signup')} 
+                        style={{ color: '#4f46e5', cursor: 'pointer', fontWeight: 'bold', textDecoration: 'underline' }}
+                    >
+                        Create one here
+                    </span>
+                </div>
             </form>
         </div>
     );

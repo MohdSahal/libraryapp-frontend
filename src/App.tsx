@@ -6,6 +6,9 @@ import Layout from './components/Layout';
 import Loader from './components/Loader';
 // Pages
 import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Join from './pages/Join';
+import Team from './pages/Team';
 import Dashboard from './pages/Dashboard';
 import Books from './pages/Books';
 import Users from './pages/Users';
@@ -36,6 +39,8 @@ function App() {
         <AuthProvider>
           <Routes>
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/join/:token" element={<Join />} />
 
             <Route path="/" element={
               <ProtectedRoute>
@@ -47,6 +52,7 @@ function App() {
               <Route path="users" element={<Users />} />
               <Route path="transactions" element={<Transactions />} />
               <Route path="reports" element={<Reports />} />
+              <Route path="team" element={<Team />} />
             </Route>
           </Routes>
         </AuthProvider>
